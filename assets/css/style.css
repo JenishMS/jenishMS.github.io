@@ -1,3 +1,16 @@
+:root {
+  --angular-color: #B52E31;
+  --javascript-color: #F0DB4F;
+  --node-js-color: #3C873A;
+  --mongo-db-color: #3FA037;
+  --html-color: #F06529;
+  --mysql-color: #00758F;
+  --css-color: #2965f1;
+  --azure-color: #008ad7;
+  --typescript-color: #007acc;
+  --flutter-color: #01579B;
+}
+
 html,
 body {
   min-height: 100%;
@@ -8,7 +21,30 @@ body {
   margin: 0;
 }
 
-.container {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* This only changes this particular animation duration */
+.animate2s {
+  animation-duration: 2s;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: #00000025;
+  color: #fff;
+}
+
+header .row {
+  height: 100%;
+}
+
+.main-container {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
     url(/assets//images/background1.jpg);
   width: 100%;
@@ -24,18 +60,121 @@ body {
   box-sizing: border-box;
 }
 
-.container h1 {
-  margin-top: 16px;
+.main-container h1 {
   font-size: 4em;
   color: gold;
+  font-weight: bold;
 }
-.container h1 small {
+.main-container h1 small {
   color: #fff;
 }
 
-.container h4 {
+.main-container h4 {
   font-size: 1.5em;
 }
-.container h2 {
+.main-container h2 {
   font-size: 2em;
+}
+
+/* Skills */
+.skill-container, .about {
+  min-height: 100vh;
+  width: 100%;
+  color: #fff;
+  padding: 10vh 3rem 3rem 3rem;
+  box-sizing: border-box;
+}
+
+.about {
+  background-color: #242424;
+}
+.skill-container {
+  background-color: #3f3b3b;
+  
+}
+
+/* About */
+.about-title, .skills-title {
+  font-size: 4rem;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Skills */
+.skills {
+  max-width: 25rem;
+  width: 100%;
+}
+.skill-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-bar.angular {
+  background-color: var(--angular-color) !important;
+}
+.progress-bar.javascript {
+  background-color: var(--javascript-color) !important;
+}
+.progress-bar.node-js {
+  background-color: var(--node-js-color) !important;
+}
+.progress-bar.mongo-db {
+  background-color: var(--mongo-db-color) !important;
+}
+.progress-bar.html {
+  background-color: var(--html-color) !important;
+}
+
+.skill-icon {
+  width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.skill-icon.angular {
+  background-image: url(/assets/images/angular.svg);
+}
+.skill-icon.javascript {
+  background-image: url(/assets/images/javascript.svg);
+}
+.skill-icon.node-js {
+  background-image: url(/assets/images/nodedotjs.svg);
+}
+.skill-icon.mysql {
+  background-image: url(/assets/images/mysql.svg);
+}
+.skill-icon.mongo-db {
+  background-image: url(/assets/images/mongodb.svg);
+}
+.skill-icon.html {
+  background-image: url(/assets/images/html5.svg);
+}
+.skill-icon.css {
+  background-image: url(/assets/images/css3.svg);
+}
+.skill-icon.azure {
+  background-image: url(/assets/images/microsoftazure.svg);
+}
+.skill-icon.typescript {
+  background-image: url(/assets/images/typescript.svg);
+}
+.skill-icon.flutter {
+  background-image: url(/assets/images/flutter.svg);
+}
+
+.logo {
+  width: 3rem;
+}
+
+.social-icons img {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: invert(1);
 }
