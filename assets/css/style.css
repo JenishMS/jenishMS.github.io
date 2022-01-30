@@ -130,6 +130,15 @@ header .row {
 .progress-bar.html {
   background-color: var(--html-color) !important;
 }
+.progress-bar.flutter {
+  background-color: var(--flutter-color) !important;
+}
+.progress-bar.typescript {
+  background-color: var(--typescript-color) !important;
+}
+.progress-bar.azure {
+  background-color: var(--azure-color) !important;
+}
 
 .skill-icon {
   width: 1.5rem;
