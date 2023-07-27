@@ -1,0 +1,30 @@
+---
+const { label, percentage, color } = Astro.props;
+---
+
+<div class="bg-secondary flex flex-col justify-center gap-4 min-h-[5rem] rounded-lg card">
+    <div class="px-4 pt-4 flex items-center gap-4 flex-grow">
+        <div><slot/></div>
+        <div class="flex-grow font-bold">{label}</div>
+    </div>
+    <div class="h-1 percentage"></div>
+</div>
+
+<style define:vars={{ percentage, color }}>
+    .percentage {
+        width: var(--percentage);
+        background-color: var(--color);
+    }
+    .card:hover .percentage {
+        animation: percentageAnimation 2s;
+    }
+
+    @keyframes percentageAnimation {
+        0% {
+            width: 0px;
+        }
+        100% {
+            width: var(--percentage);
+        }
+    }
+</style>

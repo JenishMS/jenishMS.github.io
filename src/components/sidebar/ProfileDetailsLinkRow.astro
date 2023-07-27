@@ -1,0 +1,13 @@
+---
+const {label, link} = Astro.props
+---
+<div class="my-3 flex gap-2 items-center profile-details-row">
+    <slot />
+    <a href={link} target="_blank" class="text-md">{label}</a>
+</div>
+
+<style>
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
