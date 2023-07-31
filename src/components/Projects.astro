@@ -1,0 +1,10 @@
+---
+import ProjectCarousal from "./projects/carousal";
+import Title from "./common/Title.astro";
+import experienceData from "./projects/projects.json";
+---
+
+<section id="projects" class="pt-16">
+  <Title label="PROJECT" />
+  <ProjectCarousal data={experienceData} client:load />
+</section>
