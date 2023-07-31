@@ -1,0 +1,35 @@
+[
+    {
+        "title": "aad_oauth",
+        "description": "Flutter package for AdB2c Authentication",
+        "poster": "/images/pub-dev-logo.svg",
+        "link": "https://pub.dev/packages/aad_oauth",
+        "tags": [
+            "#Flutter",
+            "#Dart",
+            "#Azure AdB2C"
+        ]
+    },
+    {
+        "title": "resumable_upload",
+        "description": "Flutter package for AdB2c blob storage resumable upload",
+        "poster": "/images/pub-dev-logo.svg",
+        "link": "https://pub.dev/packages/resumable_upload",
+        "tags": [
+            "#Flutter",
+            "#Dart",
+            "#Azure AdB2C"
+        ]
+    },
+    {
+        "title": "twitter_auth_v2",
+        "description": "Twitter v2 authentication package",
+        "poster": "/images/pub-dev-logo.svg",
+        "link": "https://pub.dev/packages/twitter_auth_v2",
+        "tags": [
+            "#Flutter",
+            "#Dart",
+            "#Twitter API"
+        ]
+    }
+]

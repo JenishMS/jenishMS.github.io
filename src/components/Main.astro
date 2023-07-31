@@ -1,15 +1,24 @@
 ---
+import About from "./main/About.astro";
+import Skills from "./main/Skills.astro";
+import Experience from "./main/Experience.astro";
 import Header from "./main/Header.astro";
 import Footer from "./main/Footer.astro"
 import Projects from "./main/Projects.astro";
+import Contributions from "./main/Contributions.astro";
+import Blogs from "./main/Blogs.astro";
+import Contact from "./main/Contact.astro";
 ---
 
-<div class="flex-grow px-4">
+<div class="flex-grow px-4 overflow-x-clip">
     <Header/>
-    <!-- <About/> 
-    <Skills/> -->
-    <!-- <Experience/> -->
+    <About/> 
+    <Skills/>
+    <Experience/>
     <!-- <Education/> -->
-    <Projects />
+    <!-- <Projects /> -->
+    <Contributions/>
+    <Blogs/>
+    <Contact/>
     <Footer/>
 </div>

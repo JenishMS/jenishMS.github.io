@@ -1,14 +1,13 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import experienceData from './projects.json';
+import experienceData from './contributions.json';
 import './carousal.css';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/grid';
 
-const ProjectCarousal = (props) => {
-  
+const ContributionCarousal = (props) => {
   return <>
       <Swiper
         slidesPerView={1.2}
@@ -28,10 +27,10 @@ const ProjectCarousal = (props) => {
         {experienceData.map((data, index) =>(<SwiperSlide key={index}>
           <div className='bg-secondary rounded-2xl p-4 flex flex-col gap-2'>
             <div className='grow'>
-              <img src="/images/dashboard.jpg" alt="Jenish MS | Software Engineer" className="avatar-img w-full h-[200px]" />
+              <img src={data.poster} alt="Jenish MS | Software Engineer" className="avatar-img w-full h-[100px]" />
             </div>
-            <div className=''>{data.title}</div>
-            <p className='line-clamp-2 text-ellipsis'>{data.description}</p>
+            <a href={data.link} target='__blank'><h3 className='font-bold text-lg hover:text-primary hover:underline'>{data.title}</h3></a>
+            {/* <p className='line-clamp-2 text-ellipsis'>{data.description}</p> */}
             <div>
               {data.tags.map((tag, tagIndex) => (<span key={tagIndex} className='text-primary mx-2'>{tag}</span>))}
             </div>
@@ -41,4 +40,4 @@ const ProjectCarousal = (props) => {
     </>
 }
 
-export default ProjectCarousal;
+export default ContributionCarousal;

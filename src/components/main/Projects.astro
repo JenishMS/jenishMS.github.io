@@ -1,10 +1,10 @@
 ---
 import ProjectCarousal from "./projects/carousal";
+import ContributionCarousal from "./projects/contribution-carousal";
+import experienceData from './projects/projects.json';
 
 ---
-<section id="experience" class="min-h-screen mt-4">
-    <h1 class="text-4xl font-semibold">Projects</h1>
-    <div >
-      <ProjectCarousal client:visible />
-    </div>
+<section id="projects" class="mt-4">
+    <h1 class="text-4xl font-semibold mb-8">Projects</h1>
+    <ProjectCarousal data={experienceData} client:load />
 </section>
