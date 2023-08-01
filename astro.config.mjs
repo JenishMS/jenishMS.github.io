@@ -5,8 +5,8 @@ import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://jenishms.github.io/",
-  base: "/jenishMS.github.io",
+  site: "https://jenishms.github.io",
+  base: "/",
   output: "server",
   adapter: node({
     mode: "standalone",
