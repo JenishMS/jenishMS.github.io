@@ -1,118 +1,30 @@
----
+---import Title from "./common/Title.astro";
+
 ---
 
-<section id="experience" class="min-h-screen mt-4">
-  <h1 class="text-4xl font-semibold">Experience</h1>
-  <div class="py-10 container mx-auto px-5">
-    <!-- component -->
-    <div class="relative">
-      <div
-        class="border-r-4 border-black absolute h-full top-0"
-        style={{ left: "9px" }}
-      >
-      </div>
-      <ul class="list-none m-0 p-0">
-        <li class="mb-5">
-          <div class="flex group items-center">
-            <div
-              class="bg-gray-800 group-hover:bg-red-700 z-10 rounded-full border-4 border-black h-5 w-5"
-            >
-              <div class="bg-black h-1 w-6 items-center ml-4 mt-1"></div>
-            </div>
-            <div class="flex-1 ml-4 z-10 font-medium">
-              <div
-                class="order-1 space-y-2 bg-gray-800 rounded-lg shadow-only transition-ease lg:w-5/12 px-6 py-4"
-              >
-                <h3 class="mb-3 font-bold text-white text-2xl">
-                  Personal Portfolio April Fools
-                </h3>
-                <p class="pb-4 text-sm text-gray-100">
-                  University of DVI (1997 - 2001)
-                </p>
-                <hr />
-                <p
-                  class="text-sm font-medium leading-snug tracking-wide text-gray-300 text-opacity-100"
-                >
-                  The education should be very interactual. Ut tincidunt est ac
-                  dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet
-                  sem in, lobortis mauris hendrerit ante.
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="mb-5">
-          <div class="flex group items-center">
-            <div
-              class="bg-gray-800 group-hover:bg-red-700 z-10 rounded-full border-4 border-black h-5 w-5"
-            >
-              <div class="bg-black h-1 w-6 items-center ml-4 mt-1"></div>
-            </div>
-            <div class="flex-1 ml-4 z-10 font-medium">
-              <div
-                class="order-1 space-y-2 bg-gray-800 rounded-lg shadow-only transition-ease lg:w-5/12 px-6 py-4"
-              >
-                <h3 class="mb-3 font-bold text-white text-2xl">
-                  Personal Portfolio April Fools
-                </h3>
-                <p class="pb-4 text-sm text-gray-100">
-                  University of DVI (1997 - 2001)
-                </p>
-                <hr />
-                <p
-                  class="text-sm font-medium leading-snug tracking-wide text-gray-300 text-opacity-100"
-                >
-                  The education should be very interactual. Ut tincidunt est ac
-                  dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet
-                  sem in, lobortis mauris hendrerit ante.
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
+<section id="education" class=" pt-16">
+  <Title label="EDUCATION" />
+  <div class="grid grid-cols-2 mt-16 gap-4 max-sm:grid-cols-1">
+    <div class="px-8 py-6 flex flex-col bg-secondary rounded-2xl">
+      <p class="text-primary font-semibold">2020 <span class="text-gray-200 mx-1">-</span> 2022</p>
+      <div class="font-semibold text-2xl">Master of Computer Application</div>
+      <div class="mt-2">Madras University</div>
+    </div>
+    <div class="px-8 py-6 flex flex-col bg-secondary rounded-2xl">
+      <p class="text-primary font-semibold">2015 <span class="text-gray-200 mx-1">-</span> 2018</p>
+      <div class="font-semibold text-2xl">Bachelor of Computer Science</div>
+      <div class="mt-2">Noorul Islam College of Arts and Science. Kumaracoil.</div>
+    </div>
+    <div class="px-8 py-6 flex flex-col bg-secondary rounded-2xl">
+      <p class="text-primary font-semibold">2013 <span class="text-gray-200 mx-1">-</span> 2015</p>
+      <div class="font-semibold text-2xl">Higher Secondary</div>
+      <div class="mt-2">St.Mary Goretty Higher Secondary School. Manalikarai</div>
+    </div>
+    <div class="px-8 py-6 flex flex-col bg-secondary rounded-2xl">
+      <p class="text-primary font-semibold">2012 <span class="text-gray-200 mx-1">-</span> 2013</p>
+      <div class="font-semibold text-2xl">Secondary</div>
+      <div class="mt-2">St.Mary Goretty Higher Secondary School. Manalikarai</div>
     </div>
   </div>
-  <!-- <div class="container mx-auto flex flex-col items-start md:flex-row my-8">
-      <div class="flex-grow sticky">
-        <div class="container mx-auto w-full h-full">
-          <div class="relative wrap overflow-hidden p-10 h-full">
-            <div class="border-2-2 border-yellow-555 absolute h-full border"
-              style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"></div>
-            <div class="border-2-2 border-yellow-555 absolute h-full border"
-              style="left: 50%; border: 2px solid #FFC100; border-radius: 1%;"></div>
-            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="order-1 w-5/12 px-1 py-4 text-right">
-                <p class="mb-3 text-base text-yellow-300">Oct, 2020</p>
-                <h4 class="mb-3 font-bold text-lg md:text-2xl">Peninsular Research Operation</h4>
-                <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                  Working as a Senior Software Engineer
-                </p>
-              </div>
-            </div>
-            <div class="mb-8 flex justify-between items-center w-full right-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="order-1  w-5/12 px-1 py-4 text-left">
-                <p class="mb-3 text-base text-yellow-300">Nov, 2018 <span class="text-gray-200 font-bold">To</span> Oct, 2020</p>
-                <h4 class="mb-3 font-bold text-lg md:text-2xl">ITW Travel & Leisure Pvt.Ltd</h4>
-                <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                  Working as a Senior Software Engineer
-                </p>
-              </div>
-            </div>
-            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="order-1 w-5/12 px-1 py-4 text-right">
-                <p class="mb-3 text-base text-yellow-300"> June, 2018 <span class="text-gray-200 font-bold">To</span> Nov, 2018</p>
-                <h4 class="mb-3 font-bold text-lg md:text-2xl">Fixel Technologies</h4>
-                <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                  Working as Software Developer
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
+  
 </section>

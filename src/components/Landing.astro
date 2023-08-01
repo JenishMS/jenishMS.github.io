@@ -1,16 +1,23 @@
 ---
 ---
 
-<section class="min-h-screen grid grid-cols-2 justify-start items-center">
+<section class="md:min-h-screen max-md:my-16 grid grid-cols-2 justify-start items-center">
   <div class="">
-    <h3 class="about-content font-medium text-3xl">Hello & Welcome</h3>
-    <h1 class="about-content text-6xl font-bold mt-4">
+    <h3 class="about-content font-medium max-md:text-xl text-3xl">Hello & Welcome</h3>
+    <h1 class="about-content max-md:text-3xl md:text-6xl font-bold mt-4">
       I'm <span class="text-yellow-600">Jenish MS</span>
     </h1>
     <h1
-      class="text-3xl font-semibold text-primary mt-4 typewriter"
+      class="max-md:hidden max-md:text-xl text-3xl font-semibold text-primary mt-4 typewriter"
       data-period="2000"
-      data-type='[ "Developer", "Freelancer", "I Love to Coding." ]'
+      data-type='[ "Developer", "Freelancer", "Open-Source Contributor", "Blogger"]'
+    >
+      <span class="wrap"></span>
+    </h1>
+    <h1
+      class="md:hidden max-md:text-xl text-3xl font-semibold text-primary mt-4 typewriter"
+      data-period="2000"
+      data-type='[ "Developer", "Freelancer", "Contributer", "Blogger"]'
     >
       <span class="wrap"></span>
     </h1>
@@ -18,7 +25,7 @@
       <a href="https://github.com/JenishMS" target="__blank"
         ><svg
           role="img"
-          class="w-6 h-6 fill-gray-500"
+          class="w-6 h-6 fill-gray-500 max-md:w-4,h-4"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           ><title>GitHub</title><path
@@ -29,7 +36,7 @@
       <a href="https://www.linkedin.com/in/jenishms" target="__blank"
         ><svg
           role="img"
-          class="w-6 h-6 fill-gray-500"
+          class="w-6 h-6 fill-gray-500 max-md:w-4,h-4"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           ><title>LinkedIn</title><path
@@ -40,7 +47,7 @@
       <a href="https://twitter.com/StupidCoder" target="__blank"
         ><svg
           role="img"
-          class="w-6 h-6 fill-gray-500"
+          class="w-6 h-6 fill-gray-500 max-md:w-4,h-4"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           ><title>Twitter</title><path
@@ -53,7 +60,7 @@
         target="__blank"
         ><svg
           role="img"
-          class="w-6 h-6 fill-gray-500"
+          class="w-6 h-6 fill-gray-500 max-md:w-4,h-4"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           ><title>Stack Overflow</title><path
@@ -64,7 +71,7 @@
       <a href="https://www.instagram.com/stupid__coder" target="__blank"
         ><svg
           role="img"
-          class="w-6 h-6 fill-gray-500"
+          class="w-6 h-6 fill-gray-500 max-md:w-4,h-4"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           ><title>Instagram</title><path
@@ -74,7 +81,7 @@
       >
     </div>
   </div>
-  <div>
+  <div class="">
     <img
       src="/Jenish MS.png"
       alt="Jenish MS | Software Engineer"
@@ -92,61 +99,61 @@
 </style>
 <script is:inline>
 var TxtType = function (el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = "";
-    this.tick();
-    this.isDeleting = false;
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = "";
+  this.tick();
+  this.isDeleting = false;
 };
 
 TxtType.prototype.tick = function () {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
 
-    if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
 
-    this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+  this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
 
-    var that = this;
-    var delta = 200 - Math.random() * 100;
+  var that = this;
+  var delta = 200 - Math.random() * 100;
 
-    if (this.isDeleting) {
-        delta /= 2;
-    }
+  if (this.isDeleting) {
+    delta /= 2;
+  }
 
-    if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === "") {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-    }
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === "") {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
 
-    setTimeout(function () {
-        that.tick();
-    }, delta);
+  setTimeout(function () {
+    that.tick();
+  }, delta);
 };
 
 window.onload = function () {
-    var elements = document.getElementsByClassName("typewriter");
-    for (var i = 0; i < elements.length; i++) {
-        var toRotate = elements[i].getAttribute("data-type");
-        var period = elements[i].getAttribute("data-period");
-        if (toRotate) {
-            new TxtType(elements[i], JSON.parse(toRotate), period);
-        }
+  var elements = document.getElementsByClassName("typewriter");
+  for (var i = 0; i < elements.length; i++) {
+    var toRotate = elements[i].getAttribute("data-type");
+    var period = elements[i].getAttribute("data-period");
+    if (toRotate) {
+      new TxtType(elements[i], JSON.parse(toRotate), period);
     }
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".typewriter > .wrap { border-right: 0.08em solid #fff}";
-    document.body.appendChild(css);
-  };
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".typewriter > .wrap { border-right: 0.08em solid #fff}";
+  document.body.appendChild(css);
+};
 </script>

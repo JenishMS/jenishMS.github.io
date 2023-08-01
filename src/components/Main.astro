@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon'
+
 import About from "./About.astro";
 import Skills from "./Skills.astro";
 import Experience from "./Experience.astro";
@@ -9,18 +11,24 @@ import Contributions from "./Contributions.astro";
 import Blogs from "./Blogs.astro";
 import Contact from "./Contact.astro";
 import Landing from "./Landing.astro";
+import Education from './Education.astro';
 ---
 
-<div class="flex-grow px-4 overflow-x-clip">
+<div class="flex-grow px-4 overflow-x-clip main-container">
   <Header />
   <Landing />
   <About />
   <Skills />
   <Experience />
-  <!-- <Education/> -->
+  <Education/>
   <Projects />
   <Contributions />
   <Blogs />
   <Contact />
   <Footer />
+  <button
+    class="scroll-to-top-button fixed bottom-6 right-6 bg-primary text-gray-200 w-12 h-12 rounded"
+    onclick="scrollToTop()"><Icon name="ic:round-arrow-upward" /></button
+  >
 </div>
+

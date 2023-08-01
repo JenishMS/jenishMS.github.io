@@ -1,7 +1,7 @@
 [
     {
-        "title": "Dynamic Dashboard",
-        "description": "Dynamic dashboard description",
+        "title": "Dynamic Dashboard Builder",
+        "description": "Developed a dynamic dashboard and form builder application using Angular. Implemented data visualization and customizable form creation, enabling users to generate dynamic content effortlessly. Utilized RESTful APIs to fetch and update data from the backend.The project showcased my expertise in front-end development and problem-solving skills while delivering efficient data management solutions.",
         "poster": "",
         "tags": [
             "Angular",
@@ -11,7 +11,7 @@
     },
     {
         "title": "Social Media App",
-        "description": "Dynamic dashboard description",
+        "description": "Developed a social media app using Flutter and Firebase, enabling users to connect and share multimedia content. Implemented user authentication, post creation, and real-time updates using Firebase services. Utilized Flutter's rich UI components for seamless and visually engaging user experience. Collaborated with a cross-functional team to ensure timely project delivery. The app demonstrated my proficiency in mobile app development, Firebase integration and teamwork while creating an interactive platform for users to socialize and express themselves.",
         "poster": "",
         "tags": [
             "Flutter",
@@ -22,7 +22,7 @@
     },
     {
         "title": "Calendar App",
-        "description": "Dynamic dashboard description",
+        "description": "Created a calendar app for officials using Flutter.Designed an intuitive interface to manage schedules, events, and appointments efficiently. Implemented features for event reminders.Collaborated with a team to gather requirements and deliver the app within the deadline. The project demonstrated my expertise in mobile app development, API integration, and problem-solving skills, providing officials with a powerful tool for effective time management.",
         "poster": "",
         "tags": [
             "Flutter",
@@ -33,7 +33,7 @@
     },
     {
         "title": "Community App",
-        "description": "Dynamic dashboard description",
+        "description": "Developed a community app using Flutter and Firebase, fostering seamless communication and collaboration among users. Created features for user profiles, messaging, and group discussions.Collaborated with a cross-functional team to gather feedback and continuously improve the app. The project showcased my proficiency in mobile app development, Firebase integration, and teamwork, empowering users to connect, share, and engage within their community.",
         "poster": "",
         "tags": [
             "Flutter",
@@ -43,46 +43,24 @@
         ]
     },
     {
-        "title": "Dynamic Dashboard",
-        "description": "Dynamic dashboard description",
+        "title": "Job Portal",
+        "description": "Developed a job portal web application using Angular, enabling job seekers to browse and apply for relevant positions while allowing employers to post job listings. Implemented user authentication and role-based access control for enhanced security. Utilized Angular Material for a modern and responsive user interface. Integrated RESTful APIs to handle data retrieval and submission. Conducted thorough testing and optimized performance for an efficient user experience. Collaborated with a team to gather requirements and meet project milestones. The project demonstrated my expertise in Angular development, RESTful API integration, and problem-solving skills, providing a valuable platform for job seekers and employers to connect seamlessly.",
         "poster": "",
         "tags": [
             "Angular",
-            "Chart.JS",
-            "Azure AdB2C"
+            "Node.JS",
+            "SMS"
         ]
     },
     {
-        "title": "Social Media App",
-        "description": "Dynamic dashboard description",
+        "title": "Medical Report Analyzer",
+        "description": "Developed a medical report analyzer web application using Angular to assist in disease diagnosis. Integrated with a machine learning backend to analyze medical reports and detect diseases accurately. Implemented data visualization to display results in a user-friendly manner. Utilized Angular Material for a visually appealing and responsive UI. Conducted rigorous testing and debugging to ensure accurate disease identification. Collaborated with a team of medical experts and developers to refine the application. The project showcased my proficiency in Angular development, data visualization, and collaboration skills, contributing to a powerful tool for early disease detection and improved healthcare outcomes.",
         "poster": "",
         "tags": [
-            "Flutter",
-            "Azure",
-            "Node.JS",
-            "Auth0"
-        ]
-    },
-    {
-        "title": "Calendar App",
-        "description": "Dynamic dashboard description",
-        "poster": "",
-        "tags": [
-            "Flutter",
-            "Azure",
-            "Node.JS",
-            "Auth0"
-        ]
-    },
-    {
-        "title": "Community App",
-        "description": "Dynamic dashboard description",
-        "poster": "",
-        "tags": [
-            "Flutter",
-            "Azure",
-            "Node.JS",
-            "Auth0"
+            "Angular",
+            "Python",
+            "Machine Learning",
+            "Node.JS"
         ]
     }
 ]
