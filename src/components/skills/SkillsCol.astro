@@ -2,7 +2,7 @@
 const { label, percentage, color } = Astro.props;
 ---
 
-<div class="bg-secondary flex flex-col justify-center gap-4 min-h-[5rem] rounded-lg card">
+<div class="bg-secondary flex flex-col justify-center gap-4 min-h-[5rem] rounded-lg card" data-aos="zoom-in-up" data-aos-duration="500">
     <div class="px-4 pt-4 flex items-center gap-4 flex-grow">
         <div><slot/></div>
         <div class="flex-grow font-bold">{label}</div>

@@ -1,6 +1,5 @@
----import Footer from '../components/Footer.astro';
-
- 
+---
+import Footer from '../components/Footer.astro'; 
 interface Props {
 	title: string;
 }
@@ -42,6 +41,8 @@ const { title } = Astro.props;
     <meta property="twitter:description"
         content="As an Energetic Software Engineer with over 5 years of experience, I specialize in App development and Full-Stack development. I possess a tenacious attitude, continuously seeking opportunities for personal growth and skill enhancement to consistently evolve and excel in my craft. Additionally, I actively contribute to Open-Source projects, aiming to foster collaborative innovation within the software development community.">
     <meta property="twitter:image" content="https://jenishms.github.io/assets/images/jenishMS.png">
+
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126730401-1"></script>
 	<script is:inline>

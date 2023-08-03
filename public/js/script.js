@@ -3,7 +3,11 @@ const skillsSection = document.querySelector("#skills h1");
 const experienceSection = document.querySelector("#experience h1");
 const projectsSection = document.querySelector("#projects h1");
 const contactSection = document.querySelector("#contact h1");
-let selectedMenu = "";
+
+const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll("nav a");
+
+var current = "";
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -26,45 +30,21 @@ window.addEventListener("scroll", function () {
     button.classList.add("hidden");
   }
 
-  //   const scrollTop = document.documentElement.scrollTop;
-  //   const checkAbout =
-  //     aboutSection.offsetTop > scrollTop &&
-  //     scrollTop + this.window.innerHeight > aboutSection.offsetTop;
+  // Nav menu code
 
-  //   const checkSkills =
-  //     skillsSection.offsetTop < scrollTop &&
-  //     scrollTop + this.window.innerHeight > skillsSection.offsetTop;
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (document.documentElement.scrollTop >= sectionTop - 60) {
+      current = section.getAttribute("id");
+    }
+  });
 
-  //   const checkExperience =
-  //     experienceSection.offsetTop < scrollTop &&
-  //     scrollTop + this.window.innerHeight > experienceSection.offsetTop;
-
-  //   const checkProjects =
-  //     projectsSection.offsetTop < scrollTop &&
-  //     scrollTop + this.window.innerHeight > projectsSection.offsetTop;
-
-  //   const checkContact =
-  //     contactSection.offsetTop < scrollTop &&
-  //     scrollTop + this.window.innerHeight > contactSection.offsetTop;
-
-  //   const changeMenu = (id) => {
-  //     selectedMenu = id;
-  //     document
-  //       .querySelectorAll(".h-menu")
-  //       .forEach((ele) => ele.classList.remove("active"));
-  //     document.getElementById(id).classList.add("active");
-  //   };
-
-  //   if (checkContact && selectedMenu !== "menu-contact")
-  //     changeMenu("menu-contact");
-  //   else if (checkProjects && selectedMenu !== "menu-projects")
-  //     changeMenu("menu-projects");
-  //   else if (checkExperience && selectedMenu !== "menu-experience")
-  //     changeMenu("menu-experience");
-  //   else if (checkSkills && selectedMenu !== "menu-skills")
-  //     changeMenu("menu-skills");
-  //   else if (checkAbout && selectedMenu !== "menu-about")
-  //     changeMenu("menu-about");
+  navLi.forEach((aEle) => {
+    aEle.classList.remove("active");
+    if (aEle.classList.contains(current)) {
+      aEle.classList.add("active");
+    }
+  });
 });
 
 function scrollToTop() {

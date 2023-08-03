@@ -25,7 +25,7 @@ const ContributionCarousal = (props) => {
       className="mySwiper relative"
     >
       {experienceData.map((data, index) => (<SwiperSlide key={index}>
-        <div className='bg-secondary rounded-2xl p-4 flex flex-col gap-2'>
+        <div className='bg-secondary rounded-2xl p-4 flex flex-col gap-2'  data-aos="zoom-in" data-aos-duration="1000">
           <div className='grow'>
             <img src={data.poster} alt="Jenish MS | Software Engineer" className="avatar-img w-full h-[100px]" />
           </div>

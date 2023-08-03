@@ -2,13 +2,13 @@
 ---
 
 <nav class="flex max-sm:justify-between justify-end gap-4 py-4 max-sm:py-2 z-10 sticky top-0 bg-[#121519]">
-  <div class="sm:hidden font-semibold text-xl">Jenish MS</div>
-  <a id="menu-about" class="h-menu max-sm:hidden active" href="#about">About</a>
-  <a id="menu-skills" class="h-menu max-sm:hidden" href="#skills">Skills</a>
-  <a id="menu-experience" class="h-menu max-sm:hidden" href="#experience">Experience</a>
-  <a id="menu-education" class="h-menu max-sm:hidden" href="#education">Education</a>
-  <a id="menu-projects" class="h-menu max-sm:hidden" href="#projects">Projects</a>
-  <a id="menu-contact" class="h-menu max-sm:hidden" href="#contact">Contact</a>
+  <h2 class="sm:hidden font-semibold text-xl">Jenish MS</h2>
+  <a class="about max-sm:hidden active" href="#about">About</a>
+  <a class="skills max-sm:hidden" href="#skills">Skills</a>
+  <a class="experience max-sm:hidden" href="#experience">Experience</a>
+  <a class="education max-sm:hidden" href="#education">Education</a>
+  <a class="projects max-sm:hidden" href="#projects">Projects</a>
+  <a class="contact max-sm:hidden" href="#contact">Contact</a>
   <div class="sm:hidden">
 			<button class="navbar-burger flex items-center text-primary p-3">
 				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -23,19 +23,20 @@
 <div class="navbar-menu relative z-50 hidden">
 		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
 		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-8/12 max-w-sm py-6 px-6 bg-secondary border-r overflow-y-auto">
-      <div class="flex items-center justify-end mb-4">				
+      <div class="flex items-center justify-between mb-4">
+        <h2>Jenish MS</h2>				
 				<button class="navbar-close">
 					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
 					</svg>
 				</button>
 			</div>
-			<a id="menu-about" class="h-menu active" href="#about">About</a>
-      <a id="menu-skills" class="h-menu" href="#skills">Skills</a>
-      <a id="menu-experience" class="h-menu" href="#experience">Experience</a>
-      <a id="menu-education" class="h-menu" href="#education">Education</a>
-      <a id="menu-projects" class="h-menu" href="#projects">Projects</a>
-      <a id="menu-contact" class="h-menu" href="#contact">Contact</a>
+			<a class="about mt-4  py-2 block text-center active" href="#about">About</a>
+      <a class="skills mt-4  py-2 block text-center" href="#skills">Skills</a>
+      <a class="experience mt-4  py-2 block text-center" href="#experience">Experience</a>
+      <a class="education mt-4  py-2 block text-center" href="#education">Education</a>
+      <a class="projects mt-4  py-2 block text-center" href="#projects">Projects</a>
+      <a class="contact mt-4  py-2 block text-center" href="#contact">Contact</a>
 		</nav>
 	</div>
 
