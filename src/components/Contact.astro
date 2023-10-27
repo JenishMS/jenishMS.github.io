@@ -4,30 +4,43 @@ import Title from "./common/Title.astro";
 
 <section id="contact" class="pt-16">
   <Title label="CONTACT" />
-  <div class="grid grid-cols-2 gap-8 max-sm:grid-cols-1" data-aos="fade-right" data-aos-duration="1000">
+  <div
+    class="grid grid-cols-2 gap-8 max-sm:grid-cols-1"
+    data-aos="fade-right"
+    data-aos-duration="1000"
+  >
     <div class="flex flex-col gap-4 mt-4 justify-center">
       <p class="text-2xl text-center max-sm:text-xl mb-8">
         I am available for freelance work. Connect with me via and call in to my
         account.
       </p>
-      <div class="grid grid-cols-2 px-8 py-4 rounded bg-secondary items-center max-lg:grid-cols-1">
+      <div
+        class="grid grid-cols-2 px-8 py-4 rounded bg-secondary items-center max-lg:grid-cols-1"
+      >
         <div class="font-bold">Email:</div>
         <div>jenishmstephen@gmail.com</div>
       </div>
-      <div class="grid grid-cols-2 px-8 py-4 rounded bg-secondary items-center max-lg:grid-cols-1">
+      <div
+        class="grid grid-cols-2 px-8 py-4 rounded bg-secondary items-center max-lg:grid-cols-1"
+      >
         <div class="font-bold">Phone:</div>
         <div>+91 94876 07371</div>
       </div>
     </div>
     <div class="">
-      <form action="#">
-        <input type="text" name="" placeholder="Name" id="" />
-        <input type="email" name="" id="" placeholder="Email" />
-        <input type="text" name="" placeholder="Subject" id="" />
-        <textarea name="" id="" cols="30" rows="5" placeholder="Message"
-        ></textarea>
+      <form id="contact-form" method="POST">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="subject" placeholder="Subject" required />
+        <textarea
+          name="message"
+          cols="30"
+          rows="5"
+          placeholder="Message"
+          required></textarea>
         <div class="mt-4">
           <button
+            id="submit-btn"
             class="bg-primary py-2 px-6 hover:bg-transparent hover:text-gray-200 hover:border hover:border-primary rounded"
             >Send</button
           >
@@ -48,3 +61,29 @@ import Title from "./common/Title.astro";
     resize: none;
   }
 </style>
+<script is:inline>
+  window.addEventListener("load", function () {
+    const form = document.getElementById("contact-form");
+    const submitButton = document.getElementById("submit-btn");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      submitButton.innerHTML = "Sending...";
+      submitButton.disabled = true;
+      const data = new FormData(form);
+      const action =
+        "https://script.google.com/macros/s/AKfycbybf48j2TNCbdH14ISn_vMsXpePMECS_miXAIXoTuXkeVYxDyBCQDFdFlie0nz3d6p56A/exec";
+      fetch(action, {
+        method: "POST",
+        body: data,
+      })
+        .then(() => {
+          form.reset();
+          alert("Thanks for contacting us.");
+        })
+        .finally(() => {
+          submitButton.innerHTML = "Send";
+          submitButton.disabled = false;
+        });
+    });
+  });
+</script>
