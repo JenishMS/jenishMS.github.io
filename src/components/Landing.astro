@@ -1,17 +1,32 @@
 ---
 ---
 
-<section class="md:min-h-screen max-md:my-[20%] grid grid-cols-2 justify-start items-center">
+<section
+  class="md:min-h-screen max-md:my-[20%] grid grid-cols-2 justify-start items-center"
+>
   <div class="">
-    <h3 class="about-content font-medium max-md:text-xl max-sm:text-base text-3xl" data-aos="fade-right" data-aos-duration="1000">Hello & Welcome</h3>
-    <h1 class="about-content max-md:text-3xl md:text-6xl  max-sm:text-2xl font-bold mt-4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+    <h3
+      class="about-content font-medium max-md:text-xl max-sm:text-base text-3xl"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+    >
+      Hello & Welcome
+    </h3>
+    <h1
+      class="about-content max-md:text-3xl md:text-6xl max-sm:text-2xl font-bold mt-4"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-delay="200"
+    >
       I'm <span class="text-yellow-600">Jenish MS</span>
     </h1>
     <h1
       class="max-md:hidden max-md:text-xl text-3xl font-semibold text-primary mt-4 typewriter"
       data-period="2000"
       data-type='[ "Developer", "Freelancer", "Open-Source Contributor", "Blogger"]'
-       data-aos-duration="1000" data-aos-delay="300"  data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-delay="300"
+      data-aos="fade-right"
     >
       <span class="wrap"></span>
     </h1>
@@ -19,11 +34,18 @@
       class="md:hidden max-md:text-xl max-sm:text-base text-3xl font-semibold text-primary mt-4 typewriter"
       data-period="2000"
       data-type='[ "Developer", "Freelancer", "Contributer", "Blogger"]'
-       data-aos-duration="1000" data-aos-delay="300" data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-delay="300"
+      data-aos="fade-right"
     >
       <span class="wrap"></span>
     </h1>
-    <div class="flex gap-6 max-sm:gap-4 max-sm:mt-8  max-md:mt-12 mt-16"  data-aos-duration="1000" data-aos-delay="400" data-aos="fade-right">
+    <div
+      class="flex gap-6 max-sm:gap-4 max-sm:mt-8 max-md:mt-12 mt-16"
+      data-aos-duration="1000"
+      data-aos-delay="400"
+      data-aos="fade-right"
+    >
       <a href="https://github.com/JenishMS" target="__blank"
         ><svg
           role="img"
@@ -70,7 +92,7 @@
           ></path></svg
         ></a
       >
-      <a href="https://www.instagram.com/stupid__coder" target="__blank"
+      <a href="https://www.instagram.com/techwithjeni" target="__blank"
         ><svg
           role="img"
           class="w-6 h-6 fill-gray-500 max-md:w-4 max-md:h-4"
@@ -100,62 +122,62 @@
   }
 </style>
 <script is:inline>
-var TxtType = function (el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.txt = "";
-  this.tick();
-  this.isDeleting = false;
-};
-
-TxtType.prototype.tick = function () {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
-
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
-
-  this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-
-  var that = this;
-  var delta = 200 - Math.random() * 100;
-
-  if (this.isDeleting) {
-    delta /= 2;
-  }
-
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === "") {
+  var TxtType = function (el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = "";
+    this.tick();
     this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-  }
+  };
 
-  setTimeout(function () {
-    that.tick();
-  }, delta);
-};
+  TxtType.prototype.tick = function () {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
 
-window.onload = function () {
-  var elements = document.getElementsByClassName("typewriter");
-  for (var i = 0; i < elements.length; i++) {
-    var toRotate = elements[i].getAttribute("data-type");
-    var period = elements[i].getAttribute("data-period");
-    if (toRotate) {
-      new TxtType(elements[i], JSON.parse(toRotate), period);
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
-  }
-  // INJECT CSS
-  var css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".typewriter > .wrap { border-right: 0.08em solid #fff}";
-  document.body.appendChild(css);
-};
+
+    this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) {
+      delta /= 2;
+    }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === "") {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
+
+    setTimeout(function () {
+      that.tick();
+    }, delta);
+  };
+
+  window.onload = function () {
+    var elements = document.getElementsByClassName("typewriter");
+    for (var i = 0; i < elements.length; i++) {
+      var toRotate = elements[i].getAttribute("data-type");
+      var period = elements[i].getAttribute("data-period");
+      if (toRotate) {
+        new TxtType(elements[i], JSON.parse(toRotate), period);
+      }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewriter > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+  };
 </script>
