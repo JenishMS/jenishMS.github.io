@@ -1,7 +1,7 @@
 ---
 const {label, title} = Astro.props;
 ---
-<div class="flex gap-2 items-center max-md:mt-4">
+<div class="flex gap-2 items-center mt-4">
     <div class="flex items-center"><slot/><span class="ml-2 font-bold">{title}</span></div>
     <span>{label}</span>
 </div>
