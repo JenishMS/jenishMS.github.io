@@ -39,6 +39,9 @@ jobs:
           path: ./dist
           name: github-pages
 
+      - name: Upload cache
+        run: ls dist/
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
