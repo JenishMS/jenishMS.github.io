@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xmlns:xhtml="http://www.w3.org/1999/xhtml"
-      xsi:schemaLocation="
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml" xsi:schemaLocation="
             http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with PRO Sitemap Service https://pro-sitemaps.com -->
+  <!-- created with PRO Sitemap Service https://pro-sitemaps.com -->
 
   <url>
-       <loc>https://jenishms.github.io/</loc>
-       <lastmod>2022-01-31T16:22:28+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1.0000</priority>
+    <loc>https://jenishms.in/</loc>
+    <lastmod>2022-01-31T16:22:28+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0000</priority>
   </url>
 </urlset>

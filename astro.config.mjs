@@ -5,6 +5,10 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://jenishms.github.io",
+  output: "static",
+  site: "https://jenishms.in",
+  build: {
+    outDir: "dist",
+  },
   integrations: [tailwind(), react()],
 });
