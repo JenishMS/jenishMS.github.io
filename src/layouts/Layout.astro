@@ -61,7 +61,7 @@ const { title } = Astro.props;
 		/>
 		<meta
 			property="og:image"
-			content="https://www.jenishms.in/images/Jenish MS.jpg"
+			content="https://www.jenishms.in/images/Jenish-MS.jpg"
 		/>
 
 		<!-- Twitter -->
@@ -77,7 +77,7 @@ const { title } = Astro.props;
 		/>
 		<meta
 			property="twitter:image"
-			content="https://www.jenishms.in/images/Jenish MS.jpg"
+			content="https://www.jenishms.in/images/Jenish-MS.jpg"
 		/>
 
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -119,28 +119,33 @@ const { title } = Astro.props;
 		<script type="application/ld+json">
 			{
 			"@context": "https://schema.org",
+			"@id": "https://www.jenishms.in/#jenishms",
 			"@type": "Person",
 			"name": "Jenish MS",
-			"alternateName": "Jenish M S",
+			"alternateName": "Jenish MS",
 			"url": "https://www.jenishms.in",
-			"image": "https://www.jenishms.in/Jenish%20MS.png",
+			"description": "As an Energetic Software Engineer with over 7+ years of experience, I specialize in App development and Full-Stack development. I possess a tenacious attitude, continuously seeking opportunities for personal growth and skill enhancement to consistently evolve and excel in my craft. Additionally, I actively contribute to Open-Source projects, aiming to foster collaborative innovation within the software development community.",
+			"image": {
+				"@type": "ImageObject",
+				"contentUrl": "https://www.jenishms.in/images/Jenish-MS.jpg"
+			},
 			"jobTitle": "Senior Software Engineer",
 			"worksFor": {
 				"@type": "Organization",
 				"name": "Peninsular Research Operation"
 			},
+			"knowsAbout": ["Mobile App Development", "Full Stack Development", "Angular", "Flutter", "Open Source", "Software Engineering", "Web Application Development", "Azure"],
 			"sameAs": [
 				"https://www.linkedin.com/in/jenishms",
 				"https://github.com/JenishMS",
 				"https://x.com/JenishMS7",
 				"https://jenishms.medium.com"
-			],
-			"description": "As an Energetic Software Engineer with over 6+ years of experience, I specialize in App development and Full-Stack development. I possess a tenacious attitude, continuously seeking opportunities for personal growth and skill enhancement to consistently evolve and excel in my craft. Additionally, I actively contribute to Open-Source projects, aiming to foster collaborative innovation within the software development community."
-			}
-		</script>
+			]
+		}</script>
 		<script type="application/ld+json">
 			{
 			"@context": "https://schema.org",
+			"@id": "https://www.jenishms.in/#jenishms_website",
 			"@type": "WebSite",
 			"name": "Jenish MS",
 			"url": "https://www.jenishms.in"
